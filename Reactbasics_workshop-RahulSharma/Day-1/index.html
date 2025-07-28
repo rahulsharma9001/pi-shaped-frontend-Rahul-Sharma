@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rahul Sharma's Personal Portfolio" />
+  <meta name="author" content="Rahul Sharma" />
+  <title>Rahul Sharma | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body class="light-mode">
+  <header class="header">
+    <div class="container flex-between">
+      <h1 class="logo">Rahul Sharma</h1>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="toggle-theme" class="theme-toggle" title="Toggle Light/Dark Mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content hero-flex">
+        <img src="https://i.pinimg.com/736x/49/8e/63/498e63a9ce2ec654870b0c5c23aad439.jpg" alt="Rahul Sharma" class="profile-img" />
+        <div>
+          <h2 class="fade-in">Hi, I'm Rahul Sharma <span class="wave">👋</span></h2>
+          <p class="subtitle">Software Consultant | Test Automation Engineer | Java Springboot Developer</p>
+          <button id="experience-btn" class="btn-primary glow">Show Experience</button>
+          <p id="experience-text" class="experience-output"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p>
+        I am passionate about building <span class="highlight">reliable and scalable test automation frameworks</span>. I love to explore new tools and technologies to improve testing strategies and developer collaboration.
+      </p>
+      <p>
+        I also work as a <span class="highlight">Java backend engineer</span> using <span class="highlight">Spring Boot</span> and various other tools like <span class="highlight">Kafka</span>, <span class="highlight">Kubernetes</span>, <span class="highlight">reactive programming</span>, and more to deliver robust backend solutions.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-grid" id="skills-list">
+          <li class="skill-card"><img src="icons/java.svg" alt="Java" />Java</li>
+          <li class="skill-card"><img src="icons/selenium.png" alt="Selenium" />Selenium</li>
+          <li class="skill-card"><img src="icons/testng.svg" alt="TestNG" />TestNG</li>
+          <li class="skill-card"><img src="icons/postman.jpg" alt="Postman" />Postman</li>
+          <li class="skill-card"><img src="icons/jmeter.jpeg" alt="JMeter" />JMeter</li>
+          <li class="skill-card"><img src="icons/gatling.webp" alt="Gatling" />Gatling</li>
+          <li class="skill-card"><img src="icons/JS.webp" alt="JavaScript" />JavaScript</li>
+          <li class="skill-card"><img src="icons/html.webp" alt="HTML" />HTML</li>
+          <li class="skill-card"><img src="icons/css.jpeg" alt="CSS" />CSS</li>
+          <li class="skill-card"><img src="icons/spring.webp" alt="Spring Boot" />Spring Boot</li>
+          <li class="skill-card"><img src="icons/docker.webp" alt="Docker" />Docker</li>
+          <li class="skill-card"><img src="icons/git.webp" alt="Git" />Git</li>
+          <li class="skill-card"><img src="icons/cicd.webp" alt="CI/CD" />CI/CD</li>
+          <li class="skill-card"><img src="icons/terraform.webp" alt="Terraform" />Terraform</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="project-list" class="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send</button>
+        </form>
+        <p id="form-message" class="form-status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container flex-between">
+      <p>&copy; <span id="year"></span> Rahul Sharma</p>
+      <p>Made with ❤️ & Vanilla JS</p>
+    </div>
+  </footer>
+</body>
+
+</html>
