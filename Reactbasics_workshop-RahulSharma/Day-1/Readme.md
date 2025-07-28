@@ -47,10 +47,12 @@ Showcases skills, projects, and experience as a Software Consultant, Test Automa
 
 ![alt text](Screenshots/image-1.png)
 
-| Light Mode | Dark Mode |
-|------------|-----------|
-| Day-1/Screenshots/light-mode.png | Day-1/Screenshots/dark-mode.png |
+Light Mode
+![alt text](Screenshots/light-mode.png)
 
+
+Dark Mode
+![alt text](Screenshots/dark-mode.png)
 ---
 
 ## 🛠️ Tech Stack
