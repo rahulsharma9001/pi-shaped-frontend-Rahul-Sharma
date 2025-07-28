@@ -43,13 +43,13 @@ Showcases skills, projects, and experience as a Software Consultant, Test Automa
 
 > _Below are the screenshots:_
 
-![Screenshot-1](Day-1/Screenshots/image.png)
+!(Day-1/Screenshots/image.png)
 
-![Screenshot-2](Day-1/Screenshots/image-1.png)
+!(Day-1/Screenshots/image-1.png)
 
 | Light Mode | Dark Mode |
 |------------|-----------|
-| ![Light Mode Screenshot](Day-1/Screenshots/light-mode.png) | ![Dark Mode Screenshot](Day-1/Screenshots/dark-mode.png) |
+| !(Day-1/Screenshots/light-mode.png) | !(Day-1/Screenshots/dark-mode.png) |
 
 ---
 
