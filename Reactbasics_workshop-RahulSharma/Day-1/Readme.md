@@ -43,9 +43,9 @@ Showcases skills, projects, and experience as a Software Consultant, Test Automa
 
 > _Below are the screenshots:_
 
-![Screenshot-1](image.png)
+![Screenshot-1](Day-1/Screenshots/image.png)
 
-![Screenshot-2](image-1.png)
+![Screenshot-2](Day-1/Screenshots/image-1.png)
 
 | Light Mode | Dark Mode |
 |------------|-----------|
