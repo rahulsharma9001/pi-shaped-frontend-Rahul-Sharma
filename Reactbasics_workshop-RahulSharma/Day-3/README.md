@@ -413,12 +413,12 @@ npm run dev
 
 ## Screen Shots
 
-![alt text](Screenshots/Image-1)
+![alt text](Day-3/react-hooks-assignment/Screenshots/Image-1.png)
 
-![alt text](Screenshots/Image-2)
+![alt text](Day-3/react-hooks-assignment/Screenshots/Image-2.png)
 
-![alt text](Screenshots/Image-3)
+![alt text](Day-3/react-hooks-assignment/Screenshots/Image-3.png)
 
-![alt text](Screenshots/Image-4)
+![alt text](Day-3/react-hooks-assignment/Screenshots/Image-4.png)
 
-![alt text](Screenshots/Image-5)
+![alt text](Day-3/react-hooks-assignment/Screenshots/Image-5.png)
