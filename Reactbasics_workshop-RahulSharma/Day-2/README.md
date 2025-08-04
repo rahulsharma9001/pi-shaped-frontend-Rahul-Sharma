@@ -69,9 +69,11 @@ react-profile-app/
 ### Installation
 
 1. Clone or download the project
+    git clone https://github.com/rahulsharma9001/pi-shaped-frontend-Rahul-Sharma.git
+    
 2. Navigate to the project directory:
    ```bash
-   cd react-profile-app
+   cd react-mini-profile-app
    ```
 
 3. Install dependencies:
@@ -153,13 +155,6 @@ The application is fully responsive and includes:
 - **Typography**: Clean, readable font hierarchy
 - **Dark Mode Support**: Prepared for dark theme implementation
 
-## 📝 Assignment Evaluation Criteria
-
-| Criteria | Status | Details |
-|----------|--------|---------|
-| **Completeness of implemented tasks** (10 marks) | ✅ Complete | All required features implemented |
-| **Quality of code** (10 marks) | ✅ High Quality | TypeScript types, clean structure, best practices |
-| **Styling of the component** (10 marks) | ✅ Professional | Modern design, responsive, animations |
 
 ## 🔧 Technical Implementation
 
@@ -200,13 +195,5 @@ Beyond the basic requirements, this implementation includes:
 - **Accessibility considerations** with proper button labels
 - **Dark mode preparation**
 
-## 📄 License
 
-This project is created for educational purposes as part of a React & TypeScript fundamentals assignment.
-
----
-
-**Assignment**: React & TypeScript Fundamentals – Part 1  
-**Project**: Mini Profile Card App  
-**Status**: ✅ Complete
 
