@@ -411,14 +411,4 @@ npm run dev
 - **Responsive Design:** Mobile-first approach with Tailwind CSS
 
 
-## Screen Shots
 
-![alt text](<Screenshot from 2025-08-04 15-59-49.png>)
-
-![alt text](<Screenshot from 2025-08-04 16-01-17.png>)
-
-![alt text](<Screenshot from 2025-08-04 16-01-27.png>)
-
-![alt text](<Screenshot from 2025-08-04 16-01-33.png>)
-
-![alt text](<Screenshot from 2025-08-04 16-01-39.png>)
