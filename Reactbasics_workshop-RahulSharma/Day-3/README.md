@@ -411,14 +411,4 @@ npm run dev
 - **Responsive Design:** Mobile-first approach with Tailwind CSS
 
 
-## Screen Shots
 
-![alt text](Day-3/react-hooks-assignment/Screenshots/Image-1.png)
-
-![alt text](Day-3/react-hooks-assignment/Screenshots/Image-2.png)
-
-![alt text](Day-3/react-hooks-assignment/Screenshots/Image-3.png)
-
-![alt text](Day-3/react-hooks-assignment/Screenshots/Image-4.png)
-
-![alt text](Day-3/react-hooks-assignment/Screenshots/Image-5.png)
