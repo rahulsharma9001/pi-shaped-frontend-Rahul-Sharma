@@ -1,171 +1,143 @@
-# Next.js Rendering Demo
+# 🚀 Day 4 Assignment: Advanced React & Next.js Development
 
-This project demonstrates the differences between Client-Side Rendering (CSR) and Server-Side Rendering (SSR) in Next.js.
+This project demonstrates advanced concepts of React and Next.js development using TypeScript. It focuses on building high-performance, maintainable frontend applications with best practices such as component optimization, lazy loading, API integration, rendering strategies (CSR vs SSR), automated testing, and code quality tools.
 
-## Project Structure
+The assignment is divided into two major parts:
+
+1. **React App:** Emphasizes component performance, lazy loading, and testability.
+2. **Next.js App:** Demonstrates API routes, and rendering strategies using both Client-Side Rendering (CSR) and Server-Side Rendering (SSR).
+
+---
+
+## 🎯 Project Goals
+
+- Build performant React components using `React.memo` and `useMemo`
+- Implement lazy-loaded components with `React.lazy` and `Suspense`
+- Create and consume custom API routes in Next.js
+- Learn and compare CSR vs SSR with practical use cases
+- Write automated tests using React Testing Library
+- Maintain code quality using ESLint and Prettier
+
+---
+
+## 📁 Project Structure Overview
 
 ```
-src/
-├── app/
-│   ├── api/
-│   │   └── fruits/
-│   │       └── route.ts          # API endpoint returning fruits data
-│   ├── csr/
-│   │   └── page.tsx              # Client-Side Rendering example
-│   ├── ssr/
-│   │   └── page.tsx              # Server-Side Rendering example
-│   └── page.tsx                  # Main navigation page
+Day-4/
+│
+├── react-advanced-Demo/
+│ ├── react-advanced-demo/ → React app: Counter, Lazy Loading, Testing
+│ └── next-rendering-demo/ → Next.js app: API, CSR, SSR
+│
+├── Screenshot/ → Images for demo/screenshots
+│ ├── Image-1.png ... Image-5.png
+│
+├── assignment-summary.md → Summary of objectives and implementation
+└── README.md → This documentation
 ```
 
-## API Endpoint
 
-### GET /api/fruits
+---
 
-Returns a JSON response with an array of fruit objects:
+## ⚛️ React App (`react-advanced-demo`)
 
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "Apple",
-      "color": "Red",
-      "taste": "Sweet"
-    }
-    // ... more fruits
-  ],
-  "timestamp": "2024-01-01T00:00:00.000Z",
-  "message": "Fruits data retrieved successfully"
-}
-```
+### 🔧 What It Does
 
-## Pages
+A React application built with TypeScript showcasing:
 
-### 1. CSR Page (`/csr`)
+- **Counter Component**
+  - Implements `useMemo` for expensive calculation optimization
+  - Uses `React.memo` to prevent unnecessary re-rendering
 
-**Implementation:**
-- Uses `'use client'` directive to enable client-side rendering
-- Implements `useEffect` hook to fetch data after component mounts
-- Shows loading state while data is being fetched
-- Handles error states and provides retry functionality
+- **Lazy Loaded Component**
+  - A `Settings` component is loaded on-demand using `React.lazy` and wrapped in `Suspense`
+  - A button click triggers the loading of this component
 
-**How it works:**
-1. Page loads immediately with loading spinner
-2. JavaScript executes `useEffect` hook after component mounts
-3. API call is made from the browser to `/api/fruits`
-4. Data is fetched and component state is updated
-5. Component re-renders with the fetched data
+- **Testing**
+  - Two test cases written using **React Testing Library (RTL)**:
+    - Counter increments correctly
+    - Lazy-loaded component appears on button click
 
-### 2. SSR Page (`/ssr`)
+- **Linting & Formatting**
+  - ESLint and Prettier are configured for consistent code formatting and error detection
+  - `npm run lint` and `npm run format` scripts are added
 
-**Implementation:**
-- Uses async server component (default in Next.js 13+ app directory)
-- Fetches data directly in the component function before rendering
-- No loading states needed as data is available immediately
-- Uses `cache: 'no-store'` to ensure fresh data on each request
+### 🖼️ Screenshots
 
-**How it works:**
-1. Server receives the request for this page
-2. Server calls the API and fetches data
-3. Server renders the complete HTML with data
-4. Browser receives fully rendered page
-5. Page is immediately visible with content
+| Feature             | Screenshot                     |
+|---------------------|--------------------------------|
+| Counter             | ![Counter](./Screenshot/Image-1.png) |
+| Lazy Loading        | ![Lazy Load](./Screenshot/Image-2.png) |
 
-## CSR vs SSR Comparison
+---
 
-| Aspect | Client-Side Rendering (CSR) | Server-Side Rendering (SSR) |
-|--------|----------------------------|------------------------------|
-| **Initial Load** | Fast HTML delivery, then loading state while fetching data | Slower HTML generation, but complete content immediately |
-| **SEO** | Poor - content not available for crawlers initially | Excellent - full content available for crawlers |
-| **Server Load** | Low - only serves static files | High - renders pages on each request |
-| **User Experience** | Loading states, smooth transitions after initial load | Immediate content, but full page reloads |
-| **JavaScript Required** | Yes - essential for functionality | No - works without JavaScript |
-| **Time to First Contentful Paint** | Fast (empty page) | Slower (but with content) |
-| **Time to Interactive** | Slower (after data fetch) | Faster (immediate) |
-| **Caching** | Easy to cache static assets | More complex server-side caching |
-| **Development Complexity** | Higher (loading states, error handling) | Lower (straightforward data fetching) |
+## 🌐 Next.js App (`next-rendering-demo`)
 
-## Pros and Cons
+### 🔧 What It Does
 
-### CSR Advantages:
-- **Fast initial page load** - HTML is served quickly
-- **Reduced server load** - Server only serves static files
-- **Rich interactivity** - Smooth client-side navigation
-- **Better for SPAs** - Single Page Application experience
-- **Offline capability** - Can work offline with service workers
+A Next.js application built with TypeScript showcasing:
 
-### CSR Disadvantages:
-- **SEO challenges** - Content not immediately available to crawlers
-- **Slower content visibility** - Users see loading states
-- **JavaScript dependency** - Requires JavaScript to function
-- **Larger bundle sizes** - More JavaScript to download
+- **API Route**
+  - A custom API route at `/api/fruits` returns a list of fruits (JSON array)
 
-### SSR Advantages:
-- **SEO-friendly** - Content is immediately available to search engines
-- **Fast content visibility** - Users see content immediately
-- **Works without JavaScript** - Functional even if JS is disabled
-- **Better Core Web Vitals** - Improved LCP (Largest Contentful Paint)
-- **Social media sharing** - Meta tags are properly rendered
+- **CSR Page (`pages/csr.tsx`)**
+  - Implements Client-Side Rendering using `useEffect` to fetch data from the API after the page loads
 
-### SSR Disadvantages:
-- **Higher server load** - Server must render each page request
-- **Slower TTFB** - Time to First Byte is higher
-- **Less interactive** - Full page reloads for navigation
-- **Complex caching** - Server-side caching strategies needed
-- **Resource intensive** - More server resources required
+- **SSR Page (`pages/ssr.tsx`)**
+  - Implements Server-Side Rendering using `getServerSideProps` to fetch data before the page is rendered
 
-## When to Use Each
+- **Comparison**
+  - Comments and/or README explanation included to compare CSR and SSR approaches
 
-### Use CSR when:
-- Building a dashboard or admin panel
-- Creating a highly interactive application
-- Server resources are limited
-- SEO is not a primary concern
-- Building a Single Page Application (SPA)
+### ⚖️ CSR vs SSR Comparison
 
-### Use SSR when:
-- SEO is critical (e-commerce, blogs, marketing sites)
-- Fast content visibility is important
-- Building content-heavy websites
-- Supporting users with slow internet connections
-- Social media sharing is important
+| Feature              | Client-Side Rendering (CSR) | Server-Side Rendering (SSR) |
+|----------------------|-----------------------------|-----------------------------|
+| Rendered Where       | In Browser                  | On Server                   |
+| First Load Speed     | Slower                      | Faster                      |
+| SEO Compatibility    | Poor                        | Great                       |
+| Use Cases            | Dashboards, Auth Areas      | Blogs, News, SEO Pages      |
 
-## Running the Project
+### 🖼️ Screenshots
+
+| Page Type | Screenshot |
+|-----------|------------|
+| Next.js Rendering Demo | ![CSR](./Screenshot/Image-3.png) |
+| CSR Page  | ![CSR](./Screenshot/Image-4.png) |
+| SSR Page  | ![SSR](./Screenshot/Image-5.png) |
+
+---
+
+## 💻 How to Run the Projects
+
+### ▶️ React App
 
 ```bash
-# Install dependencies
+cd Day-4/react-advanced-Demo/react-advanced-demo
 npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
 ```
 
-Visit:
-- `http://localhost:3000` - Main navigation page
-- `http://localhost:3000/csr` - Client-Side Rendering example
-- `http://localhost:3000/ssr` - Server-Side Rendering example
-- `http://localhost:3000/api/fruits` - API endpoint
+```bash
+npm start
+```
+##▶️ Next.js App
+```bash
+cd Day-4/react-advanced-Demo/next-rendering-demo
+```
+```bash
+npm install
+```
+```bash
+npm run dev
+```
 
-## Technologies Used
+## 🧼 Linting and Formatting
+```bash
+npm run lint
+```
+```bash
+npm run format
+```
 
-- **Next.js 15** - React framework with app directory
-- **TypeScript** - Type safety and better development experience
-- **Tailwind CSS** - Utility-first CSS framework
-- **React 19** - Latest React features and improvements
 
-## Key Learning Points
-
-1. **CSR** is better for interactive applications where SEO is not critical
-2. **SSR** is better for content-heavy sites where SEO and fast content visibility matter
-3. **Next.js** makes it easy to implement both approaches in the same application
-4. **API routes** in Next.js provide a simple way to create backend endpoints
-5. **Modern React** with hooks makes CSR implementation straightforward
-6. **Server components** in Next.js 13+ make SSR implementation simple and efficient
 
